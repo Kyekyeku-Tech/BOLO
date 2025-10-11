@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+  <!-- Firebase Config & Gallery Logic -->
+  <script src="js/firebase-config.js"></script>
+  <script src="js/gallery.js" defer></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fb;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      background: white;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+      margin-bottom: 20px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h2>Image Gallery</h2>
+  <marquee behavior="scroll" direction="left" scrollamount="5" style="margin-bottom: 20px; color: #333;">
+    Explore our collection of images showcasing our services and projects! Hover over images for a closer look.
+  </marquee>
+<h2> Service images Are coming Soon.....</h2>
+  <button onclick="window.location.href='index.html'">Back to Home</button>
+
+  <div class="gallery" id="gallery"></div>
+  <p id="status"></p>
+</body>
+</html>
