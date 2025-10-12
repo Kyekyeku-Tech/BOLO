@@ -26,7 +26,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: rgb(2, 27, 253);
+      background: rgba(2, 102, 233, 0.993);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -286,10 +286,10 @@
 
     /* ===== Footer ===== */
     footer {
-      background: white;
+      background: rgb(3, 62, 255);
       text-align: center;
       padding: 40px 20px;
-      color: black;
+      color: rgb(253, 252, 252);
     }
 
     footer img {
